@@ -66,7 +66,7 @@ export default {
 
 .heading {
   margin-bottom: 20px;
-  border-bottom: solid 2px #1995ad;
+  border-bottom: solid 2px skyblue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

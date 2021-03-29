@@ -2431,11 +2431,12 @@ var timeLimit = 10 * 1000;
 var startTime = 0;
 /* harmony default export */ __webpack_exports__["default"] = ({
   beforeMount: function beforeMount() {
-    this.first_article(); // 初期位置
+    this.site_create(); // 初期位置
 
-    window.scrollTo(0, 0);
+    window.addEventListener('scroll', this.scroll_watch);
   },
   mounted: function mounted() {
+    window.scrollTo(0, 0);
     document.title = 'スクロール大会';
     document.querySelector('meta[name="description"]').setAttribute('content', 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂入ってたら思った');
   },
@@ -2470,34 +2471,16 @@ var startTime = 0;
   },
   methods: {
     scroll_start: function scroll_start() {
-      // window.addEventListener('scroll', this.site_create);
-      window.addEventListener('scroll', this.scroll_watch);
-      this.site_create();
       startTime = Date.now();
       this.updateTimer();
     },
     site_create: function site_create() {
-      // ページの位置（一番上の位置）
-      this.scroll = window.pageYOffset; // ページ全体の高さ
-
-      var doch = document.body.clientHeight; // ウィンドウの高さ
-
-      var winh = window.innerHeight; // ページの最下部の位置
-
-      var bottom = doch - winh;
-      if (this.scroll === 0) this.marginTop = 'mt-5';else this.marginTop = '';
-
-      for (var i = 0; i < 100; i++) {
+      for (var i = 0; i < 400; i++) {
         this.create_article();
       }
     },
     scroll_watch: function scroll_watch() {
       this.scroll = window.pageYOffset;
-    },
-    first_article: function first_article() {
-      for (var i = 0; i < 10; i++) {
-        this.create_article();
-      }
     },
     create_article: function create_article() {
       this.index++;
@@ -7071,7 +7054,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".youtube {\n  width: auto;\n  margin: 0 1em;\n  background: #a1d6e2;\n  overflow: hidden;\n  border-radius: 10px;\n  border: solid 1px #1995ad;\n  cursor: pointer;\n}\n.youtube .thumbnail {\n  height: 240px;\n  border-bottom: solid 1px #1995ad;\n  background: #333;\n  color: white;\n}\n.youtube p, .youtube h6 {\n  margin: 0 10px;\n}\n.youtube .title {\n  font-weight: bold;\n}\n@media screen and (max-width: 544px) {\n.youtube {\n    width: auto;\n}\n.youtube .thumbnail {\n    height: 120px;\n}\n}\n.heading {\n  margin-bottom: 20px;\n  border-bottom: solid 2px #1995ad;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-end;\n  font-size: 2rem;\n}\narticle {\n  margin-bottom: 80px;\n}\narticle > p {\n  font-size: 1.25rem;\n}", ""]);
+exports.push([module.i, ".youtube {\n  width: auto;\n  margin: 0 1em;\n  background: #a1d6e2;\n  overflow: hidden;\n  border-radius: 10px;\n  border: solid 1px #1995ad;\n  cursor: pointer;\n}\n.youtube .thumbnail {\n  height: 240px;\n  border-bottom: solid 1px #1995ad;\n  background: #333;\n  color: white;\n}\n.youtube p, .youtube h6 {\n  margin: 0 10px;\n}\n.youtube .title {\n  font-weight: bold;\n}\n@media screen and (max-width: 544px) {\n.youtube {\n    width: auto;\n}\n.youtube .thumbnail {\n    height: 120px;\n}\n}\n.heading {\n  margin-bottom: 20px;\n  border-bottom: solid 2px skyblue;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: flex-end;\n  font-size: 2rem;\n}\narticle {\n  margin-bottom: 80px;\n}\narticle > p {\n  font-size: 1.25rem;\n}", ""]);
 
 // exports
 
