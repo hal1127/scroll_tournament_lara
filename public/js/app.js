@@ -2003,6 +2003,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Footer'
 });
@@ -2036,29 +2038,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
-    this.topClass = '';
+    this.homeClass = '';
     this.rankClass = '';
     this.aboutClass = '';
 
-    switch (this.HLight) {
-      case 'top':
-        this.topClass = 'bdr';
+    switch (this.HiLight) {
+      case 'home':
+        this.homeClass = 'border-bottom border-white';
         break;
 
-      case 'rank':
-        this.rankClass = 'bdr';
+      case 'ranking':
+        this.rankClass = 'border-bottom border-white';
         break;
 
       case 'about':
-        this.aboutClass = 'bdr';
+        this.aboutClass = 'border-bottom border-white';
         break;
     }
   },
   name: 'Header',
   props: {
-    HLight: String
+    HiLight: String
   },
   deta: function deta() {
     return {
@@ -2385,6 +2391,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Modal_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Modal.vue */ "./resources/js/components/Modal.vue");
 /* harmony import */ var _components_ResultModal_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ResultModal.vue */ "./resources/js/components/ResultModal.vue");
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
+/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
 //
 //
 //
@@ -2410,6 +2417,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -2435,7 +2444,8 @@ var startTime = 0;
     Article: _components_Article_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Modal: _components_Modal_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     ResultModal: _components_ResultModal_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   data: function data() {
     return {
@@ -2547,6 +2557,8 @@ var startTime = 0;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
+/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
+//
 //
 //
 //
@@ -2573,9 +2585,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   mounted: function mounted() {
     document.title = 'スクロール大会のランキング';
@@ -7076,7 +7090,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".bdr {\n  border-bottom: white solid 5px;\n}\na:hover {\n  opacity: 0.8;\n}", ""]);
+exports.push([module.i, ".border-bottom {\n  border-bottom: 3px solid white !important;\n}\n.nav-item {\n  font-weight: bold;\n}", ""]);
 
 // exports
 
@@ -39215,32 +39229,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "footer" }, [
-    _vm._v("\n  Copyright © 2021 Hal All Rights Reserved."),
-    _c("br"),
-    _vm._v(" "),
-    _c("a", { attrs: { href: "https://twitter.com/yes_or_no11" } }, [
-      _c(
-        "svg",
-        {
-          attrs: {
-            width: "1.5em",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 248 204"
-          }
-        },
-        [
-          _c("path", {
+  return _c(
+    "div",
+    { staticClass: "footer", staticStyle: { "background-color": "#1995ad" } },
+    [
+      _c("div", { staticClass: "pt-3 pb-3" }, [
+        _vm._v("\n    Covpyright © 2021 Hal\n  ")
+      ]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "https://twitter.com/yes_or_no11" } }, [
+        _c(
+          "svg",
+          {
             attrs: {
-              d:
-                "M222 51v7c0 67-51 144-144 144v-1c-27 1-54-7-77-22a103 103 0 0075-21c-22-1-41-15-47-35 7 1 15 1 22-1-23-5-40-25-40-50 7 4 15 6 23 6a51 51 0 01-16-67c26 31 64 50 104 52a51 51 0 0186-46c12-2 22-6 32-12-3 12-11 22-22 28 10-1 20-4 29-8-7 10-15 19-25 26z",
-              fill: "#fff"
+              width: "1.5em",
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 248 204"
             }
-          })
-        ]
-      )
-    ])
-  ])
+          },
+          [
+            _c("path", {
+              attrs: {
+                d:
+                  "M222 51v7c0 67-51 144-144 144v-1c-27 1-54-7-77-22a103 103 0 0075-21c-22-1-41-15-47-35 7 1 15 1 22-1-23-5-40-25-40-50 7 4 15 6 23 6a51 51 0 01-16-67c26 31 64 50 104 52a51 51 0 0186-46c12-2 22-6 32-12-3 12-11 22-22 28 10-1 20-4 29-8-7 10-15 19-25 26z",
+                fill: "#fff"
+              }
+            })
+          ]
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39264,69 +39283,61 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    {
-      staticClass: "navbar navbar-expand navbar-light pb-0 pt-3 mb-sm-4",
-      staticStyle: { "background-color": "#1995ad" }
-    },
-    [
-      _c("div", { staticClass: "collapse navbar-collapse" }, [
-        _c("ul", { staticClass: "navbar-nav mr-auto" }, [
-          _c(
-            "li",
-            { class: "nav-item align-bottom " + _vm.topClass },
-            [
+  return _c("header", [
+    _c(
+      "nav",
+      {
+        staticClass: "navbar navbar-expand navbar-dark fixed-top pb-0",
+        staticStyle: { "background-color": "#1995ad" }
+      },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "collapse navbar-collapse" }, [
+            _c("ul", { staticClass: "navbar-nav mr-auto" }, [
               _c(
-                "router-link",
-                {
-                  staticClass: "text-white px-2 pb-3",
-                  staticStyle: { "text-decoration": "none" },
-                  attrs: { to: "/" }
-                },
-                [_vm._v("ホーム")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { class: "nav-item align-bottom " + _vm.rankClass },
-            [
+                "li",
+                { class: "nav-item " + _vm.homeClass },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "nav-link", attrs: { to: "/" } },
+                    [_vm._v("ホーム")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
               _c(
-                "router-link",
-                {
-                  staticClass: "text-white px-2 pb-3",
-                  staticStyle: { "text-decoration": "none" },
-                  attrs: { to: "/rank" }
-                },
-                [_vm._v("ランキング")]
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            { class: "nav-item align-bottom " + _vm.aboutClass },
-            [
+                "li",
+                { class: "nav-item " + _vm.rankClass },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "nav-link", attrs: { to: "/ranking" } },
+                    [_vm._v("ランキング")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
               _c(
-                "router-link",
-                {
-                  staticClass: "text-white px-2 pb-3",
-                  staticStyle: { "text-decoration": "none" },
-                  attrs: { to: "/about" }
-                },
-                [_vm._v("サイトについて")]
+                "li",
+                { class: "nav-item " + _vm.aboutClass },
+                [
+                  _c(
+                    "router-link",
+                    { staticClass: "nav-link", attrs: { to: "/about" } },
+                    [_vm._v("サイトについて")]
+                  )
+                ],
+                1
               )
-            ],
-            1
-          )
+            ])
+          ])
         ])
-      ])
-    ]
-  )
+      ]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39547,7 +39558,7 @@ var render = function() {
     "div",
     { attrs: { id: "about" } },
     [
-      _c("Header", { attrs: { HLight: "about" } }),
+      _c("Header", { attrs: { HiLight: "about" } }),
       _vm._v(" "),
       _vm._m(0),
       _vm._v(" "),
@@ -39564,9 +39575,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container p-3" }, [
       _c("h1", { staticClass: "heading" }, [_vm._v("スクロール大会について")]),
       _vm._v(" "),
-      _c("h3", { staticClass: "border-bottom border-primary m-2" }, [
-        _vm._v("環境")
-      ]),
+      _c("h3", { staticClass: "border-bottom m-2" }, [_vm._v("環境")]),
       _vm._v(" "),
       _c("table", { attrs: { border: "1", width: "100%" } }, [
         _c("thead", { staticClass: "table-head" }, [
@@ -39604,9 +39613,7 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("h3", { staticClass: "border-bottom border-primary m-2" }, [
-        _vm._v("あとがき")
-      ]),
+      _c("h3", { staticClass: "border-bottom m-2" }, [_vm._v("あとがき")]),
       _vm._v(" "),
       _c("p", [
         _vm._v("\n      こんにちは。このサイトの製作者のはるです。"),
@@ -39699,7 +39706,7 @@ var render = function() {
     "div",
     { attrs: { id: "home" } },
     [
-      _c("Header", { attrs: { HLight: "top" } }),
+      _c("Header", { attrs: { HiLight: "home" } }),
       _vm._v(" "),
       _c(
         "div",
@@ -39752,7 +39759,9 @@ var render = function() {
       _vm._v(" "),
       _vm.isFinished
         ? _c("ResultModal", { attrs: { result: _vm.result } })
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("Footer")
     ],
     1
   )
@@ -39783,7 +39792,7 @@ var render = function() {
     "div",
     { attrs: { id: "rank" } },
     [
-      _c("Header", { attrs: { HLight: "rank" } }),
+      _c("Header", { attrs: { HiLight: "ranking" } }),
       _vm._v(" "),
       _c("div", { staticClass: "container p-3" }, [
         _c("h1", { staticClass: "heading" }, [_vm._v("ランキング")]),
@@ -39807,7 +39816,9 @@ var render = function() {
             0
           )
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("Footer")
     ],
     1
   )
@@ -55687,27 +55698,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var routes = [{
   path: '/',
   name: 'Home',
-  component: _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-  meta: {
-    title: 'スクロール大会',
-    desc: 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂入ってたら思った'
-  }
+  component: _views_Home_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
   path: '/about',
   name: 'About',
-  component: _views_About_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-  meta: {
-    title: 'スクロール大会 | ランキング',
-    desc: 'みんなでスクロールした距離で競い合った結果'
-  }
+  component: _views_About_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
-  path: '/rank',
+  path: '/ranking',
   name: 'Rank',
-  component: _views_Rank_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-  meta: {
-    title: 'スクロール大会について',
-    desc: 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂は言ってたら思った'
-  }
+  component: _views_Rank_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',

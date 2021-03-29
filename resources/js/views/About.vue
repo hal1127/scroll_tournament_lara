@@ -1,9 +1,9 @@
 <template>
   <div id="about">
-    <Header HLight="about" />
+    <Header HiLight="about" />
     <div class="container p-3">
       <h1 class="heading">スクロール大会について</h1>
-      <h3 class="border-bottom border-primary m-2">環境</h3>
+      <h3 class="border-bottom m-2">環境</h3>
       <table border="1" width="100%">
         <thead class="table-head">
           <tr>
@@ -31,7 +31,7 @@
         </tbody>
       </table>
 
-      <h3 class="border-bottom border-primary m-2">あとがき</h3>
+      <h3 class="border-bottom m-2">あとがき</h3>
       <p>
         こんにちは。このサイトの製作者のはるです。<br>
         <br>

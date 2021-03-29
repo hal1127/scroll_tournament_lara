@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header HLight="top" />
+    <Header HiLight="home" />
     <div :class="'position-fixed p-1 m-1 scroll bg-white rounded ' + marginTop">
       <h1>{{ Math.floor(scroll).toLocaleString()+'px' }}</h1>
     </div>
@@ -20,6 +20,7 @@
     </div>
     <Modal @scroll_start="scroll_start" />
     <ResultModal v-if="isFinished" :result="result" />
+    <Footer />
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import Article from '../components/Article.vue'
 import Modal from '../components/Modal.vue'
 import ResultModal from '../components/ResultModal.vue'
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 
 let headdings = [
   '公式ホームページ始めました‼',
@@ -66,6 +68,7 @@ export default {
     Modal,
     ResultModal,
     Header,
+    Footer
   },
   data() {
     return {

@@ -1,43 +1,47 @@
 <template>
-  <nav class="navbar navbar-expand navbar-light pb-0 pt-3 mb-sm-4" style="background-color: #1995ad">
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li :class="'nav-item align-bottom '+topClass">
-          <router-link to="/" class="text-white px-2 pb-3" style="text-decoration: none;">ホーム</router-link>
-        </li>
-        <li :class="'nav-item align-bottom '+rankClass">
-          <router-link to="/rank" class="text-white px-2 pb-3" style="text-decoration: none;">ランキング</router-link>
-        </li>
-        <li :class="'nav-item align-bottom '+aboutClass">
-          <router-link to="/about" class="text-white px-2 pb-3" style="text-decoration: none;">サイトについて</router-link>
-        </li>
-      </ul>
+<header>
+  <nav class="navbar navbar-expand navbar-dark fixed-top pb-0" style="background-color: #1995ad">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li :class="'nav-item '+homeClass">
+            <router-link to="/" class="nav-link">ホーム</router-link>
+          </li>
+          <li :class="'nav-item '+rankClass">
+            <router-link to="/ranking" class="nav-link">ランキング</router-link>
+          </li>
+          <li :class="'nav-item '+aboutClass">
+            <router-link to="/about" class="nav-link">サイトについて</router-link>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+</header>
 </template>
 
 <script>
 export default {
   created() {
-    this.topClass = '';
+    this.homeClass = '';
     this.rankClass = '';
     this.aboutClass = '';
 
-    switch (this.HLight) {
-      case 'top':
-        this.topClass = 'bdr';
+    switch (this.HiLight) {
+      case 'home':
+        this.homeClass = 'border-bottom border-white';
         break;
-      case 'rank':
-        this.rankClass = 'bdr';
+      case 'ranking':
+        this.rankClass = 'border-bottom border-white';
         break;
       case 'about':
-        this.aboutClass = 'bdr';
+        this.aboutClass = 'border-bottom border-white';
         break;
     }
   },
   name: 'Header',
   props: {
-    HLight: String,
+    HiLight: String,
   },
   deta() {
     return {
@@ -51,12 +55,10 @@ export default {
 </script>
 
 <style lang="scss">
-.bdr {
-  border-bottom: white solid 5px;
+.border-bottom {
+  border-bottom: 3px solid white !important;
 }
-
-a:hover {
-  opacity: 0.8;
+.nav-item {
+  font-weight: bold;
 }
-
 </style>

@@ -10950,3 +10950,7 @@ body {
   background-color: skyblue;
 }
 
+h3.border-bottom {
+  border-bottom: 2px solid skyblue !important;
+}
+

@@ -1,6 +1,6 @@
 <template>
   <div id="rank">
-    <Header HLight="rank" />
+    <Header HiLight="ranking" />
     <div class="container p-3">
       <h1 class="heading">ランキング</h1>
       <table border="1" width="100%">
@@ -20,14 +20,17 @@
         </tbody>
       </table>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   mounted() {
     document.title = 'スクロール大会のランキング';

@@ -5,5 +5,5 @@
 Route::get('/{site}', function () {
   return view('index');
   // ''(何もない)、'rank'、'about'のいずれか
-})->where('site', '|rank|about');
+})->where('site', '|ranking|about');
 
