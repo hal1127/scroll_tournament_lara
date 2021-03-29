@@ -1,6 +1,6 @@
 <template>
   <div id="rank">
-    <Header HiLight="ranking" />
+    <Header />
     <div class="container p-3">
       <h1 class="heading">ランキング</h1>
       <table border="1" width="100%">

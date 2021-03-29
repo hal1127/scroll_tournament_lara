@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Header HiLight="home" />
+    <Header />
     <div :class="'position-fixed p-1 m-1 scroll bg-white rounded ' + marginTop">
       <h1>{{ Math.floor(scroll).toLocaleString()+'px' }}</h1>
     </div>

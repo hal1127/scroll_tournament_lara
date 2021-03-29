@@ -5,13 +5,16 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
           <li :class="'nav-item '+homeClass">
-            <router-link to="/" class="nav-link">ホーム</router-link>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li :class="'nav-item '+rankClass">
-            <router-link to="/ranking" class="nav-link">ランキング</router-link>
+            <router-link to="/ranking" class="nav-link">Ranking</router-link>
+          </li>
+          <li :class="'nav-item '+helpClass">
+            <router-link to="/help" class="nav-link">Help</router-link>
           </li>
           <li :class="'nav-item '+aboutClass">
-            <router-link to="/about" class="nav-link">サイトについて</router-link>
+            <router-link to="/about" class="nav-link">About Me</router-link>
           </li>
         </ul>
       </div>
@@ -26,28 +29,30 @@ export default {
     this.homeClass = '';
     this.rankClass = '';
     this.aboutClass = '';
+    this.helpClass = '';
 
-    switch (this.HiLight) {
-      case 'home':
+    switch (location.pathname) {
+      case '/':
         this.homeClass = 'border-bottom border-white';
         break;
-      case 'ranking':
+      case '/ranking':
         this.rankClass = 'border-bottom border-white';
         break;
-      case 'about':
+      case '/about':
         this.aboutClass = 'border-bottom border-white';
+        break;
+      case '/help':
+        this.helpClass = 'border-bottom border-white';
         break;
     }
   },
   name: 'Header',
-  props: {
-    HiLight: String,
-  },
   deta() {
     return {
       topClass: 'bdr',
       rankClass: '',
       aboutClass: '',
+      helpClass: '',
 
     }
   },

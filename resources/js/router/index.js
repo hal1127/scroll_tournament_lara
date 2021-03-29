@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Rank from '../views/Rank.vue'
+import Help from '../views/Help.vue'
 
 Vue.use(VueRouter)
 
@@ -21,7 +22,12 @@ const routes = [
     path: '/ranking',
     name: 'Rank',
     component: Rank,
-  }
+  },
+  {
+    path: '/help',
+    name: 'Kiyaku',
+    component: Help,
+  },
 ]
 
 const router = new VueRouter({

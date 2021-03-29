@@ -1,36 +1,8 @@
 <template>
   <div id="about">
-    <Header HiLight="about" />
+    <Header />
     <div class="container p-3">
-      <h1 class="heading">スクロール大会について</h1>
-      <h3 class="border-bottom m-2">環境</h3>
-      <table border="1" width="100%">
-        <thead class="table-head">
-          <tr>
-            <th class="p-2"></th>
-            <th class="p-2">言語</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="p-2">Webサーバー</td>
-            <td class="p-2">Apache</td>
-          </tr>
-          <tr>
-            <td class="p-2">フロントエンド言語</td>
-            <td class="p-2">Vue.js(JavaScript)</td>
-          </tr>
-          <tr>
-            <td class="p-2">バックエンド言語</td>
-            <td class="p-2">Laravel(PHP)</td>
-          </tr>
-          <tr>
-            <td class="p-2">データベース</td>
-            <td class="p-2">PostgreSQL</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <h1 class="heading">運営者について</h1>
       <h3 class="border-bottom m-2">あとがき</h3>
       <p>
         こんにちは。このサイトの製作者のはるです。<br>

@@ -15,7 +15,7 @@ class ResultsController extends Controller
      */
     public function index()
     {
-        return Result::orderBy('score', 'desc')->get();
+        return Result::orderBy('score', 'desc')->limit(10)->get();
     }
 
     /**
