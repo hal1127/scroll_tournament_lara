@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     get_ranking() {
-      this.axios.get(`http://${window.location.host}/api/results`)
+      this.axios.get(`${location.protocol}//${window.location.host}/api/results`)
           .then(response => {
             // console.log(response)
             this.ranking = response.data;

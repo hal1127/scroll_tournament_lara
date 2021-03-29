@@ -2263,7 +2263,7 @@ function scroll_control(event) {
         name: value,
         score: Math.floor(this.result)
       };
-      this.axios.post("http://".concat(window.location.host, "/api/results"), data).then(function () {
+      this.axios.post("".concat(location.protocol, "//").concat(window.location.host, "/api/results"), data).then(function () {
         location.href = "http://".concat(window.location.host, "/rank"); // console.log(response);
       })["catch"](function (errors) {
         alert(JSON.stringify(errors.response.data)); // console.log(errors.response);
@@ -2588,7 +2588,7 @@ __webpack_require__.r(__webpack_exports__);
     get_ranking: function get_ranking() {
       var _this = this;
 
-      this.axios.get("http://".concat(window.location.host, "/api/results")).then(function (response) {
+      this.axios.get("".concat(location.protocol, "//").concat(window.location.host, "/api/results")).then(function (response) {
         // console.log(response)
         _this.ranking = response.data;
       })["catch"](function (error) {

@@ -83,10 +83,10 @@ export default {
       console.log(`scroll: ${Math.floor(this.result)}`);
 
       const data = {name: value, score: Math.floor(this.result)};
-      this.axios.post(`http://${window.location.host}/api/results`, data)
+      this.axios.post(`${location.protocol}//${window.location.host}/api/results`, data)
           .then(() => {
 
-            location.href=`http://${window.location.host}/rank`;
+            location.href=`http://${window.location.host}/ranking`;
             // console.log(response);
           })
           .catch(errors => {
