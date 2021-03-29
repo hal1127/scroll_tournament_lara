@@ -4,7 +4,7 @@
     <div class="container p-3">
       <h1 class="heading">ランキング</h1>
       <table border="1" width="100%">
-        <thead class="rank-head">
+        <thead class="table-head">
           <tr>
             <th class="p-2" width="10%">順位</th>
             <th class="p-2">名前</th>
@@ -30,6 +30,8 @@ export default {
     Header
   },
   mounted() {
+    document.title = 'スクロール大会のランキング';
+    document.querySelector('meta[name="description"]').setAttribute('content', 'みんなでスクロールした距離で競い合った結果');
     this.get_ranking();
   },
   data() {
@@ -39,22 +41,16 @@ export default {
   },
   methods: {
     get_ranking() {
-      this.axios.get('http://localhost:8000/api/results')
+      this.axios.get(`http://${window.location.host}/api/results`)
           .then(response => {
-            console.log(response)
+            // console.log(response)
             this.ranking = response.data;
           })
           .catch(error => {
             alert('失敗');
-            console.log(error);
+            // console.log(error);
           })
     }
   }
 }
 </script>
-
-<style lang="scss">
-.rank-head {
-  background-color: skyblue;
-}
-</style>

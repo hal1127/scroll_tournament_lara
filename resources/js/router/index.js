@@ -10,17 +10,20 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: { title: 'スクロール大会', desc: 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂入ってたら思った' }
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: About,
+    meta: { title: 'スクロール大会 | ランキング', desc: 'みんなでスクロールした距離で競い合った結果' }
   },
   {
     path: '/rank',
     name: 'Rank',
-    component: Rank
+    component: Rank,
+    meta: { title: 'スクロール大会について', desc: 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂は言ってたら思った' }
   }
 ]
 

@@ -56,8 +56,9 @@ export default {
     // 初期位置
     window.scrollTo(0, 0);
   },
-  mounted () {
-    console.log(window.location.host);
+  mounted() {
+    document.title = 'スクロール大会'
+    document.querySelector('meta[name="description"]').setAttribute('content', 'みんなでスクロールした距離で競い合ったら面白いんじゃね？と風呂入ってたら思った')
   },
   name: 'App',
   components: {
@@ -102,7 +103,7 @@ export default {
       if (this.scroll === 0) this.marginTop = 'mt-5';
       else this.marginTop = ''
 
-      for (let i = 0; i < 178; i++) {
+      for (let i = 0; i < 100; i++) {
         this.create_article();
       }
     },
@@ -187,7 +188,6 @@ html::-webkit-scrollbar {
 .container {
   width: 500px;
   margin: 0 auto;
-  background: white;
 }
 
 @media screen and (max-width: 480px) {
@@ -196,7 +196,7 @@ html::-webkit-scrollbar {
   }
 }
 
-body {
-  background: #f0eff0;
-}
+// body {
+//   background: #f0eff0;
+// }
 </style>

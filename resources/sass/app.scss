@@ -6,3 +6,12 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+body {
+  font-family: "Noto Sans CJK JP","游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,sans-serif;
+}
+
+.table-head {
+  background-color: skyblue;
+}
