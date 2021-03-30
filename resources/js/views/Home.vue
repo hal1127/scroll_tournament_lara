@@ -92,7 +92,7 @@ export default {
       this.updateTimer();
     },
     site_create() {
-      for (let i = 0; i < 400; i++) {
+      for (let i = 0; i < 2000; i++) {
         this.create_article();
       }
     },
@@ -155,7 +155,7 @@ export default {
 
 <style lang="scss">
 html::-webkit-scrollbar {
-  display: none;
+  // display: none;
 }
 
 .scroll {

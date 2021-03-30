@@ -2548,7 +2548,7 @@ var startTime = 0;
       this.updateTimer();
     },
     site_create: function site_create() {
-      for (var i = 0; i < 400; i++) {
+      for (var i = 0; i < 2000; i++) {
         this.create_article();
       }
     },
@@ -7165,7 +7165,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "html::-webkit-scrollbar {\n  display: none;\n}\n.scroll {\n  top: 0;\n  left: 0;\n}\n.timer {\n  top: 0;\n  right: 0;\n}\n.container {\n  width: 500px;\n  margin: 0 auto;\n}\n@media screen and (max-width: 480px) {\n.container {\n    width: auto;\n}\n}", ""]);
+exports.push([module.i, ".scroll {\n  top: 0;\n  left: 0;\n}\n.timer {\n  top: 0;\n  right: 0;\n}\n.container {\n  width: 500px;\n  margin: 0 auto;\n}\n@media screen and (max-width: 480px) {\n.container {\n    width: auto;\n}\n}", ""]);
 
 // exports
 
