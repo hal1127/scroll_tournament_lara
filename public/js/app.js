@@ -55896,7 +55896,7 @@ var routes = [{
   component: _views_Rank_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/help',
-  name: 'Kiyaku',
+  name: 'Help',
   component: _views_Help_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

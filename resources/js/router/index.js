@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: '/help',
-    name: 'Kiyaku',
+    name: 'Help',
     component: Help,
   },
 ]
