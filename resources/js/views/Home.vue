@@ -77,7 +77,7 @@ export default {
       height: 0,
       article_params: [{id: 1,headding: headdings[0], yt_title: yt_titles[0], yt_desc: yt_descs[0], article_cont: article_conts[0]}],
       index: 0,
-      timerLeft: 10 * 1000,
+      timerLeft: 5 * 1000,
       timerText: '10.00',
       timerInt: '10',
       timerFloot: '.00',
@@ -92,7 +92,7 @@ export default {
       this.updateTimer();
     },
     site_create() {
-      for (let i = 0; i < 2000; i++) {
+      for (let i = 0; i < 1000; i++) {
         this.create_article();
       }
     },

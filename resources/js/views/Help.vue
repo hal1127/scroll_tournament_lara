@@ -77,7 +77,7 @@ export default {
   },
 mounted() {
     document.title = 'スクロール大会 | ヘルプ';
-    document.querySelector('meta[name="description"]').setAttribute('content', '利用規約');
+    document.querySelector('meta[name="description"]').setAttribute('content', 'help me erinnnnnnnnnn!!!!!!!');
   },
 }
 </script>
