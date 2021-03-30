@@ -155,7 +155,7 @@ export default {
 
 <style lang="scss">
 html::-webkit-scrollbar {
-  // display: none;
+  display: none;
 }
 
 .scroll {
