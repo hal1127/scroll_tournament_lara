@@ -2445,7 +2445,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     document.title = 'スクロール大会 | ヘルプ';
-    document.querySelector('meta[name="description"]').setAttribute('content', '利用規約');
+    document.querySelector('meta[name="description"]').setAttribute('content', 'help me erinnnnnnnnnn!!!!!!!');
   }
 });
 
@@ -2500,7 +2500,7 @@ var headdings = ['公式ホームページ始めました‼', '動画投稿し�
 var yt_titles = ['【ついに…】公式サイト作ったよ！', '【無意味】アジの開き閉じてみた！'];
 var yt_descs = ['とうとう、はるさめん公式ホームページができました！ホームページのURLはこちらです→http://harusame...', 'アジの開きっておいしいですよね。でも、なんで開いているのか考えたことはありませんか？'];
 var article_conts = ["\u52D5\u753B\u6295\u7A3F\u3092\u59CB\u3081\u30661\u5E74\u304C\u7D4C\u3061\u307E\u3057\u305F\u2026\u3002<br>\n  \u3064\u3044\u306B\u3001\u516C\u5F0F\u30B5\u30A4\u30C8\u304C\u3067\u304D\u307E\u3057\u305F\u203C\u52D5\u753B\u6295\u7A3F\u306E\u5831\u544A\u3084\u3001\u8FD1\u6CC1\u3092\u66F4\u65B0\u3057\u3066\u3044\u304F\u306E\u3067\u3001\u697D\u3057\u307F\u306B\u3057\u3066\u3044\u3066\u304F\u3060\u3055\u3044\uFF01", '動画を投稿しました！ぜひ見てみてください！'];
-var timeLimit = 10 * 1000;
+var timeLimit = 5 * 1000;
 var startTime = 0;
 /* harmony default export */ __webpack_exports__["default"] = ({
   beforeMount: function beforeMount() {
@@ -2533,9 +2533,9 @@ var startTime = 0;
         article_cont: article_conts[0]
       }],
       index: 0,
-      timerLeft: 10 * 1000,
-      timerText: '10.00',
-      timerInt: '10',
+      timerLeft: 5 * 1000,
+      timerText: '5.00',
+      timerInt: '5',
       timerFloot: '.00',
       isFinished: false,
       marginTop: 'mt-5',
@@ -2548,7 +2548,7 @@ var startTime = 0;
       this.updateTimer();
     },
     site_create: function site_create() {
-      for (var i = 0; i < 2000; i++) {
+      for (var i = 0; i < 1000; i++) {
         this.create_article();
       }
     },

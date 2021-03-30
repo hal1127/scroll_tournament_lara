@@ -49,7 +49,7 @@ let article_conts = [
   '動画を投稿しました！ぜひ見てみてください！',
 ];
 
-const timeLimit = 10 * 1000;
+const timeLimit = 5 * 1000;
 let startTime = 0;
 
 export default {
@@ -78,8 +78,8 @@ export default {
       article_params: [{id: 1,headding: headdings[0], yt_title: yt_titles[0], yt_desc: yt_descs[0], article_cont: article_conts[0]}],
       index: 0,
       timerLeft: 5 * 1000,
-      timerText: '10.00',
-      timerInt: '10',
+      timerText: '5.00',
+      timerInt: '5',
       timerFloot: '.00',
       isFinished: false,
       marginTop: 'mt-5',
