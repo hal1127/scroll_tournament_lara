@@ -17,6 +17,4 @@ class Result extends Model
     'score.integer' => 'スコアを入力してください',
     'score.min' => 'スコアは0以上で入力してください',
   ];
-
-  
 }

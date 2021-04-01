@@ -1,24 +1,26 @@
 <template>
   <div id="rank">
     <Header />
-    <div class="container p-3">
+    <div class="container-main container">
       <h1 class="heading">ランキング</h1>
-      <table border="1" width="100%">
-        <thead class="table-head">
-          <tr>
-            <th class="p-2" width="10%">順位</th>
-            <th class="p-2">名前</th>
-            <th class="p-2">スコア</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(r, index) in ranking" :key="r.id" >
-            <td class="p-2">{{ `${index+1}位` }}</td>
-            <td class="p-2">{{ r.name }}</td>
-            <td class="p-2">{{ r.score }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="container">
+        <table border="1" width="100%">
+          <thead class="table-head">
+            <tr>
+              <th class="p-2">順位</th>
+              <th class="p-2">名前</th>
+              <th class="p-2">スコア</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(r, index) in ranking" :key="r.id" >
+              <td class="p-2">{{ `${index+1}位` }}</td>
+              <td class="p-2">{{ r.name }}</td>
+              <td class="p-2">{{ r.score.toLocaleString() }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <Footer />
   </div>
@@ -32,9 +34,12 @@ export default {
     Header,
     Footer
   },
+  beforeMount() {
+    },
   mounted() {
     document.title = 'スクロール大会のランキング';
     document.querySelector('meta[name="description"]').setAttribute('content', 'みんなでスクロールした距離で競い合った結果');
+    this.create_ranking();
     this.get_ranking();
   },
   data() {
@@ -53,7 +58,21 @@ export default {
             alert('失敗');
             // console.log(error);
           })
+    },
+    create_ranking() {
+      let ranking = [];
+      for (let i=0; i<10; i++) {
+        ranking.push({id: i, name: '', score: 0});
+      }
+      console.log(ranking);
+      this.ranking = ranking;
     }
   }
 }
 </script>
+
+<style lang="scss">
+#rank th:first-child {
+  width: 4em;
+}
+</style>

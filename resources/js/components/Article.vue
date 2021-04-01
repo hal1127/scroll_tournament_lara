@@ -33,8 +33,8 @@ export default {
 <style lang="scss">
 
 .youtube {
-  width: auto;
-  margin: 0 1em;
+  width: 500px;
+  margin: 0 auto;
   background: #a1d6e2;
   overflow: hidden;
   border-radius: 10px;

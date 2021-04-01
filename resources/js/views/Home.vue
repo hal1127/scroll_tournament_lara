@@ -7,7 +7,7 @@
     <div :class="'position-fixed p-1 m-1 timer bg-white rounded ' + marginTop">
       <h1>{{ this.timerInt }}<small class="font-weight-normal">{{ this.timerFloot }}</small></h1>
     </div>
-    <div class="container p-3">
+    <div class="container container-main">
     <Article
       v-for="article_param in article_params"
       :key="article_param.id"
@@ -17,6 +17,7 @@
       :article_desc="article_param.article_desc"
       :article_cont="article_param.article_cont"
     />
+    <a href="/secrets-d2s9qmtczg" @click="discoverURL">リンク</a>
     </div>
     <Modal @scroll_start="scroll_start" />
     <ResultModal v-if="isFinished" :result="result" />
@@ -133,6 +134,19 @@ export default {
     this.updateTimerText();
   },
 
+  discoverURL () {
+    this.axios.post(`${location.protocol}//${window.location.host}/api/results`, data)
+          .then(() => {
+
+            location.href=`http://${window.location.host}/ranking`;
+            // console.log(response);
+          })
+          .catch(errors => {
+            alert(JSON.stringify(errors.response.data));
+            // console.log(errors.response);
+          });
+  },
+
     updateTimerText () {
       this.timerText = (this.timerLeft / 1000).toFixed(2);
 
@@ -155,7 +169,7 @@ export default {
 
 <style lang="scss">
 html::-webkit-scrollbar {
-  display: none;
+  // display: none;
 }
 
 .scroll {
@@ -168,13 +182,12 @@ html::-webkit-scrollbar {
   right: 0;
 }
 
-.container {
-  width: 500px;
-  margin: 0 auto;
+.container-main {
+  padding: 4rem 1em;
 }
 
 @media screen and (max-width: 480px) {
-  .container {
+  .container-main {
     width: auto;
   }
 }

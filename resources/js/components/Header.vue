@@ -16,6 +16,9 @@
           <li :class="'nav-item '+aboutClass">
             <router-link to="/about" class="nav-link">About Me</router-link>
           </li>
+          <li class="nav-item">
+            <a href="/secrets-f2n5gufpe7" class="nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -60,10 +63,13 @@ export default {
 </script>
 
 <style lang="scss">
-.border-bottom {
+header .border-bottom {
   border-bottom: 3px solid white !important;
 }
 .nav-item {
   font-weight: bold;
+  &:hover {
+    border-bottom: 3px solid rgba($color: #fff, $alpha: .7);
+  }
 }
 </style>

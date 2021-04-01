@@ -14,7 +14,7 @@
 
 </head>
 <body>
-  <div id="app" class="pt-5">
+  <div id="app">
     <router-view/>
   </div>
   <script src=" {{ mix('js/app.js') }} "></script>

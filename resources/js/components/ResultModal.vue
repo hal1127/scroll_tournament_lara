@@ -31,8 +31,7 @@
 </template>
 
 <script>
-// import $ from 'jquery'
-
+  let timeoutId;
   function scroll_control(event) {
     event.preventDefault();
   }
@@ -64,12 +63,17 @@ export default {
       document.addEventListener("mousewheel", scroll_control, { passive: false });
       // スマホでのタッチ操作でのスクロール禁止
       document.addEventListener("touchmove", scroll_control, { passive: false });
+      window.scrollTo(0, this.result);
+      timeoutId = setTimeout(() => {
+      this.no_scroll();
+    }, 10);
     },
     return_scroll() {
       // PCでのスクロール禁止解除
       document.removeEventListener("mousewheel", scroll_control, { passive: false });
       // スマホでのタッチ操作でのスクロール禁止解除
       document.removeEventListener('touchmove', scroll_control, { passive: false });
+      clearTimeout(timeoutId);
     },
     onSubmit(e) {
       e.preventDefault();
@@ -92,7 +96,7 @@ export default {
           .catch(errors => {
             alert(JSON.stringify(errors.response.data));
             // console.log(errors.response);
-          })
+          });
 
       this.close_modal(e);
     },
