@@ -16,10 +16,3 @@ export default {
   name: 'Footer',
 }
 </script>
-
-<style>
-#footer {
-  background: teal;
-  color: white;
-}
-</style>

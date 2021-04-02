@@ -17,3 +17,4 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 Route::apiResource('/results', 'ResultsController')->only(['index', 'store']);
+Route::apiResource('/secrets', 'SecretsController')->only(['index', 'update']);

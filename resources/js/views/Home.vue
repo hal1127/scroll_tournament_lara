@@ -166,33 +166,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss">
-html::-webkit-scrollbar {
-  // display: none;
-}
-
-.scroll {
-  top: 0;
-  left: 0;
-}
-
-.timer {
-  top: 0;
-  right: 0;
-}
-
-.container-main {
-  padding: 4rem 1em;
-}
-
-@media screen and (max-width: 480px) {
-  .container-main {
-    width: auto;
-  }
-}
-
-// body {
-//   background: #f0eff0;
-// }
-</style>

@@ -15,8 +15,8 @@ class ResultsTableSeeder extends Seeder
     {
         for ($i=0; $i < 10; $i++) {
             Result::create([
-                'name' => $faker->firstName,
-                'score' => rand(10000, 500000)
+                'name' => '',
+                'score' => 0
             ]);
         }
     }

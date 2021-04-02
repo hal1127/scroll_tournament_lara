@@ -7,15 +7,148 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-
+/* 共通 */
 body {
   font-family: "Noto Sans CJK JP","游ゴシック Medium","Yu Gothic Medium","游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,sans-serif;
+}
+
+table {
+  margin-bottom: 1rem;
 }
 
 .table-head {
   background-color: skyblue;
 }
 
+.heading {
+  margin-bottom: 20px;
+  border-bottom: solid 2px skyblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 2rem;
+}
+
 h3.border-bottom {
   border-bottom: 2px solid skyblue !important;
+}
+
+/* ヘッダー */
+header .border-bottom {
+  border-bottom: 3px solid white !important;
+}
+.nav-item {
+  font-weight: bold;
+  &:hover {
+    border-bottom: 3px solid rgba($color: #fff, $alpha: .7);
+  }
+}
+
+/* フッター */
+#footer {
+  background: teal;
+  color: white;
+}
+
+/* ホーム */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  top: 0;
+  left: 0;
+}
+
+.timer {
+  top: 0;
+  right: 0;
+}
+
+.container-main {
+  padding: 4rem 1em;
+}
+
+@media screen and (max-width: 480px) {
+  .container-main {
+    width: auto;
+  }
+}
+
+/* モーダル */
+/* 表示/非表示はvueで制御するので最初から表示状態にする */
+.modal {
+  display: block;
+}
+
+/* vueのtransitionを使わないなら不要 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .15s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* 記事 */
+.youtube {
+  width: 500px;
+  margin: 0 auto;
+  background: #a1d6e2;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px #1995ad;
+  cursor: pointer;
+  .thumbnail {
+    height: 240px;
+    border-bottom: solid 1px #1995ad;
+    background: #333;
+    color: white;
+  }
+  p, h6 {
+    margin: 0 10px;
+  }
+  .title {
+    font-weight: bold;
+  }
+}
+
+  @media screen and (max-width: 544px) {
+    .youtube {
+      width: auto;
+      .thumbnail {
+        height: 120px;
+      }
+    }
+  }
+
+article {
+  margin-bottom: 80px;
+  .container > p {
+    font-size: 1.25rem;
+  }
+}
+
+/* ランキング */
+#rank td:first-child, th:first-child {
+  width: 4.5em;
+  text-align: center;
+}
+
+/* アバウト */
+#about .secret3 {
+  font-size: .5em;
+  color: #f8fafc;
+}
+
+/* 隠しページ */
+.secrets {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
+.secrets p{
+  font-size: 1.3em;
+  color: #333;
+  font-style: italic;
 }

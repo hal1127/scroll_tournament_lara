@@ -18,6 +18,19 @@ mounted() {
     document.title = '隠しページ1 | スクロール大会';
     document.querySelector('meta[name="description"]').setAttribute('content', '見つけられるかな？？');
     $('body').addClass('secrets');
+    this.discover();
+  },
+  methods: {
+    discover() {
+      this.axios.put(`${location.protocol}//${window.location.host}/api/secrets/3`)
+          .then(() => {
+            // console.log(response);
+          })
+          .catch(errors => {
+            alert(JSON.stringify(errors.response.data));
+            // console.log(errors.response);
+          });
+    }
   }
 }
 </script>

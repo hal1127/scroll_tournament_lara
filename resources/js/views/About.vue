@@ -48,9 +48,3 @@ mounted() {
 }
 </script>
 
-<style>
-#about  .secret3 {
-  font-size: .5em;
-  color: #f8fafc;
-}
-</style>

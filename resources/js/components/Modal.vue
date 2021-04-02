@@ -66,18 +66,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* 表示/非表示はvueで制御するので最初から表示状態にする */
-.modal {
-  display: block;
-}
-
-/* vueのtransitionを使わないなら不要 */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .15s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-</style>

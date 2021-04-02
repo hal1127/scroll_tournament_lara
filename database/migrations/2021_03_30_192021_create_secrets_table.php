@@ -14,7 +14,7 @@ class CreateSecretsTable extends Migration
     public function up()
     {
         Schema::create('secrets', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->index();
             $table->integer('count');
             $table->timestamps();
         });

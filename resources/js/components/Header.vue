@@ -63,13 +63,5 @@ export default {
 </script>
 
 <style lang="scss">
-header .border-bottom {
-  border-bottom: 3px solid white !important;
-}
-.nav-item {
-  font-weight: bold;
-  &:hover {
-    border-bottom: 3px solid rgba($color: #fff, $alpha: .7);
-  }
-}
+
 </style>

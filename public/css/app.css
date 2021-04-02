@@ -10942,15 +10942,173 @@ a.text-dark:focus {
   }
 }
 
+/* 共通 */
+
 body {
   font-family: "Noto Sans CJK JP", "\6E38\30B4\30B7\30C3\30AF   Medium", "Yu Gothic Medium", "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF\4F53", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", Meiryo, sans-serif;
+}
+
+table {
+  margin-bottom: 1rem;
 }
 
 .table-head {
   background-color: skyblue;
 }
 
+.heading {
+  margin-bottom: 20px;
+  border-bottom: solid 2px skyblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 2rem;
+}
+
 h3.border-bottom {
   border-bottom: 2px solid skyblue !important;
+}
+
+/* ヘッダー */
+
+header .border-bottom {
+  border-bottom: 3px solid white !important;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+/* フッター */
+
+#footer {
+  background: teal;
+  color: white;
+}
+
+/* ホーム */
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  top: 0;
+  left: 0;
+}
+
+.timer {
+  top: 0;
+  right: 0;
+}
+
+.container-main {
+  padding: 4rem 1em;
+}
+
+@media screen and (max-width: 480px) {
+  .container-main {
+    width: auto;
+  }
+}
+
+/* モーダル */
+
+/* 表示/非表示はvueで制御するので最初から表示状態にする */
+
+.modal {
+  display: block;
+}
+
+/* vueのtransitionを使わないなら不要 */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 記事 */
+
+.youtube {
+  width: 500px;
+  margin: 0 auto;
+  background: #a1d6e2;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px #1995ad;
+  cursor: pointer;
+}
+
+.youtube .thumbnail {
+  height: 240px;
+  border-bottom: solid 1px #1995ad;
+  background: #333;
+  color: white;
+}
+
+.youtube p,
+.youtube h6 {
+  margin: 0 10px;
+}
+
+.youtube .title {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 544px) {
+  .youtube {
+    width: auto;
+  }
+
+  .youtube .thumbnail {
+    height: 120px;
+  }
+}
+
+article {
+  margin-bottom: 80px;
+}
+
+article .container > p {
+  font-size: 1.25rem;
+}
+
+/* ランキング */
+
+#rank td:first-child,
+th:first-child {
+  width: 4.5em;
+  text-align: center;
+}
+
+/* アバウト */
+
+#about .secret3 {
+  font-size: 0.5em;
+  color: #f8fafc;
+}
+
+/* 隠しページ */
+
+.secrets {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+}
+
+.secrets p {
+  font-size: 1.3em;
+  color: #333;
+  font-style: italic;
 }
 
