@@ -66,6 +66,12 @@ export default {
     this.site_create();
     // 初期位置
     window.addEventListener('scroll', this.scroll_watch);
+    $('body').keydown(function (e) {
+      if (e.key === 'End') {
+        console.log(e.key);
+        return false
+      }
+    });
   },
   mounted() {
     window.scrollTo(0, 0);
