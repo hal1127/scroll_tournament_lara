@@ -38628,7 +38628,7 @@ var render = function() {
     [
       _c("div", { staticClass: "pb-5 pl-5 pb-3" }, [
         _c("div", { staticClass: "pb-3" }, [
-          _vm._v("\n      Covpyright © 2021 Hal\n    ")
+          _vm._v("\n      Copyright © 2021 Hal\n    ")
         ]),
         _vm._v(" "),
         _c("a", { attrs: { href: "https://twitter.com/yes_or_no11" } }, [
@@ -39413,7 +39413,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("td", { staticClass: "p-2" }, [
-                            _vm._v(_vm._s(s.count))
+                            _vm._v(_vm._s(s.count + "人"))
                           ])
                         ])
                       }),

@@ -35,7 +35,7 @@
             <tbody>
               <tr v-for="s in secrets" :key="s.id" >
                 <td class="p-2">{{ s.id }}</td>
-                <td class="p-2">{{ s.count }}</td>
+                <td class="p-2">{{ s.count+'人' }}</td>
               </tr>
             </tbody>
           </table>
