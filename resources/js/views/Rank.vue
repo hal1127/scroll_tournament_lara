@@ -22,22 +22,24 @@
         </table>
       </div>
 
-      <h1 class="heading">隠しページ</h1>
-      <div class="container">
-        <table class="secret" border="1" width="100%">
-          <thead class="table-head">
-            <tr>
-              <th class="p-2">サイト</th>
-              <th class="p-2">発見した人数</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="s in secrets" :key="s.id" >
-              <td class="p-2">{{ s.id }}</td>
-              <td class="p-2">{{ s.count }}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div v-if="secrets[0].count+secrets[1].count+secrets[2].count">
+        <h1 class="heading">隠しページ</h1>
+        <div class="container">
+          <table class="secret" border="1" width="100%">
+            <thead class="table-head">
+              <tr>
+                <th class="p-2">サイト</th>
+                <th class="p-2">発見した人数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="s in secrets" :key="s.id" >
+                <td class="p-2">{{ s.id }}</td>
+                <td class="p-2">{{ s.count }}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
       </div>
     </div>
     <Footer />

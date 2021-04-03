@@ -2514,10 +2514,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var headdings = ['公式ホームページ始めました‼', '動画投稿しました‼'];
-var yt_titles = ['【ついに…】公式サイト作ったよ！', '【無意味】アジの開き閉じてみた！'];
-var yt_descs = ['とうとう、はるさめん公式ホームページができました！ホームページのURLはこちらです→http://harusame...', 'アジの開きっておいしいですよね。でも、なんで開いているのか考えたことはありませんか？'];
-var article_conts = ["\u52D5\u753B\u6295\u7A3F\u3092\u59CB\u3081\u30661\u5E74\u304C\u7D4C\u3061\u307E\u3057\u305F\u2026\u3002<br>\n  \u3064\u3044\u306B\u3001\u516C\u5F0F\u30B5\u30A4\u30C8\u304C\u3067\u304D\u307E\u3057\u305F\u203C\u52D5\u753B\u6295\u7A3F\u306E\u5831\u544A\u3084\u3001\u8FD1\u6CC1\u3092\u66F4\u65B0\u3057\u3066\u3044\u304F\u306E\u3067\u3001\u697D\u3057\u307F\u306B\u3057\u3066\u3044\u3066\u304F\u3060\u3055\u3044\uFF01", '動画を投稿しました！ぜひ見てみてください！'];
+var headdings = ['公式ホームページ始めました‼', '動画投稿しました‼', '動画投稿しました‼', '動画投稿しました‼'];
+var yt_titles = ['【ついに…】公式サイト作ったよ！', '【無意味】アジの開き閉じてみた！', 'UVERworldのライブにUber Eats呼んでみた！', '【激ウマ？】堅揚げポテトを二度揚げしてみた！'];
+var yt_descs = ['とうとう、はるさめん公式ホームページができました！ホームページのURLはこちらです→http://harusame...', 'アジの開きっておいしいですよね。でも、なんで開いているのか考えたことはありませんか？', 'UVERworldとUber Eatsって似てるし、ほぼ同じですよね？', 'ほぼ岩'];
+var article_conts = ["\u52D5\u753B\u6295\u7A3F\u3092\u59CB\u3081\u30661\u5E74\u304C\u7D4C\u3061\u307E\u3057\u305F\u2026\u3002<br>\n  \u3064\u3044\u306B\u3001\u516C\u5F0F\u30B5\u30A4\u30C8\u304C\u3067\u304D\u307E\u3057\u305F\u203C\u52D5\u753B\u6295\u7A3F\u306E\u5831\u544A\u3084\u3001\u8FD1\u6CC1\u3092\u66F4\u65B0\u3057\u3066\u3044\u304F\u306E\u3067\u3001\u697D\u3057\u307F\u306B\u3057\u3066\u3044\u3066\u304F\u3060\u3055\u3044\uFF01", '動画を投稿しました！ぜひ見てみてください！', '動画を投稿しました！ぜひ見てみてください！', '動画を投稿しました！ぜひ見てみてください！'];
 var timeLimit = 5 * 1000;
 var startTime = 0;
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2639,6 +2639,8 @@ var startTime = 0;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
 /* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer.vue */ "./resources/js/components/Footer.vue");
+//
+//
 //
 //
 //
@@ -39382,29 +39384,40 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("h1", { staticClass: "heading" }, [_vm._v("隠しページ")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "container" }, [
-          _c(
-            "table",
-            { staticClass: "secret", attrs: { border: "1", width: "100%" } },
-            [
-              _vm._m(1),
+        _vm.secrets[0].count + _vm.secrets[1].count + _vm.secrets[2].count
+          ? _c("div", [
+              _c("h1", { staticClass: "heading" }, [_vm._v("隠しページ")]),
               _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.secrets, function(s) {
-                  return _c("tr", { key: s.id }, [
-                    _c("td", { staticClass: "p-2" }, [_vm._v(_vm._s(s.id))]),
+              _c("div", { staticClass: "container" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass: "secret",
+                    attrs: { border: "1", width: "100%" }
+                  },
+                  [
+                    _vm._m(1),
                     _vm._v(" "),
-                    _c("td", { staticClass: "p-2" }, [_vm._v(_vm._s(s.count))])
-                  ])
-                }),
-                0
-              )
-            ]
-          )
-        ])
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.secrets, function(s) {
+                        return _c("tr", { key: s.id }, [
+                          _c("td", { staticClass: "p-2" }, [
+                            _vm._v(_vm._s(s.id))
+                          ]),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "p-2" }, [
+                            _vm._v(_vm._s(s.count))
+                          ])
+                        ])
+                      }),
+                      0
+                    )
+                  ]
+                )
+              ])
+            ])
+          : _vm._e()
       ]),
       _vm._v(" "),
       _c("Footer")
